@@ -13,8 +13,6 @@ To run the script, you will need to have Python 3 installed on your machine, as 
 
 You can install the libraries using pip:
 
-Copy code
-
 `pip install telepot numpy pillow rsa requests urllib3` 
 
 To use the bot, you will need to create a Telegram Bot and obtain a Bot Token from BotFather. You can then replace the placeholder value for `BOT_TOKEN` with your own token.
@@ -24,8 +22,6 @@ The bot listens for messages from users and performs different actions depending
 Note that the script includes code for using a proxy server, which is only necessary if you are using a free PythonAnywhere account. If you are not using a proxy server, you can remove this code.
 
 To run the script, simply execute it from the command line:
-
-Copy code
 
 `python3 telegram_bot.py` 
 
