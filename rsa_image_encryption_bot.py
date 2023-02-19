@@ -16,7 +16,7 @@ telepot.api._onetime_pool_spec = (
     urllib3.ProxyManager, dict(proxy_url=proxy_url, num_pools=1, maxsize=1, retries=False, timeout=30))
 # end of the stuff that's only needed for free accounts
 
-BOT_TOKEN = '6251350454:AAEQL_ujEBsGD7YhyOL_Wh-SEwP_BFm8Tu0'  # NOQA
+BOT_TOKEN = "<your bot token>"
 
 bot = telepot.Bot(BOT_TOKEN)  # NOQA
 public_key, private_key = rsa.newkeys(2048)
