@@ -28,3 +28,6 @@ To run the script, simply execute it from the command line:
 `python3 telegram_bot.py` 
 
 The script will run indefinitely, listening for messages from users. To stop the script, you can use `Ctrl + C` in the command line.
+
+![visitors](https://visitor-badge.glitch.me/badge?page_id=NpFHs.rsa_in_image_bot&left_color=green&right_color=blue)
+
