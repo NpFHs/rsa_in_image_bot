@@ -1,6 +1,8 @@
 # Image RSA encryption
 This is a Python script for a Telegram Bot that can encrypt and decrypt messages using RSA cryptography, as well as convert messages to and from binary format and images.
 
+You can find it here: [https://t.me/rsa_encryption_bot](https://t.me/rsa_encryption_bot)
+
 ![image_2023-02-19_21-43-33](https://user-images.githubusercontent.com/87757968/219971293-4937f831-d9cc-4eb2-9958-21234d676b06.png)
 
 To run the script, you will need to have Python 3 installed on your machine, as well as the following libraries:
