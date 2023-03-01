@@ -1,3 +1,5 @@
+import os
+
 import telepot
 import numpy
 from PIL import Image
@@ -7,16 +9,16 @@ import requests
 
 import urllib3
 
-# You can leave this bit out if you're using a paid PythonAnywhere account
-proxy_url = "http://proxy.server:3128"
-telepot.api._pools = {
-    'default': urllib3.ProxyManager(proxy_url=proxy_url, num_pools=3, maxsize=10, retries=False, timeout=30),
-}
-telepot.api._onetime_pool_spec = (
-    urllib3.ProxyManager, dict(proxy_url=proxy_url, num_pools=1, maxsize=1, retries=False, timeout=30))
-# end of the stuff that's only needed for free accounts
+# # You can leave this bit out if you're using a paid PythonAnywhere account
+# proxy_url = "http://proxy.server:3128"
+# telepot.api._pools = {
+#     'default': urllib3.ProxyManager(proxy_url=proxy_url, num_pools=3, maxsize=10, retries=False, timeout=30),
+# }
+# telepot.api._onetime_pool_spec = (
+#     urllib3.ProxyManager, dict(proxy_url=proxy_url, num_pools=1, maxsize=1, retries=False, timeout=30))
+# # end of the stuff that's only needed for free accounts
 
-BOT_TOKEN = "<your bot token>"
+BOT_TOKEN = "6251350454:AAFVGRmcdfWbXFT1V_BVs174RSYnGcRFBDo"
 
 bot = telepot.Bot(BOT_TOKEN)  # NOQA
 public_key, private_key = rsa.newkeys(2048)
@@ -35,7 +37,6 @@ def bin_to_image(bin_msg):
     height = 16
     width = 16
     image_arr = image_arr.reshape((height, width, 3))
-    print(f"shape: {image_arr.shape}")
     image = Image.fromarray(image_arr)
     image.save(image_path)
 
@@ -118,6 +119,7 @@ def handle(msg):
             response = org_msg
         except rsa.pkcs1.DecryptionError:
             response = "Decryption failed"
+        os.remove(file_path)
         bot.sendMessage(chat_id, response)
 
     elif content_type == "text":
