@@ -18,7 +18,7 @@ import urllib3
 #     urllib3.ProxyManager, dict(proxy_url=proxy_url, num_pools=1, maxsize=1, retries=False, timeout=30))
 # # end of the stuff that's only needed for free accounts
 
-BOT_TOKEN = "6251350454:AAFVGRmcdfWbXFT1V_BVs174RSYnGcRFBDo"
+BOT_TOKEN = ""
 
 bot = telepot.Bot(BOT_TOKEN)  # NOQA
 public_key, private_key = rsa.newkeys(2048)
