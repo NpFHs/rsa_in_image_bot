@@ -6,7 +6,6 @@ from PIL import Image
 import rsa
 import time
 import requests
-
 import urllib3
 
 # # You can leave this bit out if you're using a paid PythonAnywhere account
